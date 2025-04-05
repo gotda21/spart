@@ -1,0 +1,36 @@
+header.header
+    
+        .header_main 
+            .header_top
+                .header_top__logo
+                    a(href="/") 
+                        img(src="i/logo.svg", alt="Logo")
+                .header_top__location
+                    img(src="i/icons/mark.svg", alt="Location")
+                    p Магадан
+                .header_top__number
+                    .header_top__number_button
+                        button 
+                            img(src="i/icons/phone.svg", alt="")
+                            p +7 423 202 55 02
+                    .header_top__number_icon
+                        a(href="") 
+                            img(src="i/socials/whatsapp.svg", alt="")
+                .header_top__cart
+                    a(href="") 
+                        img(src="i/icons/cart.svg", alt="")
+                        p Корзина (10)
+                .header_top__account
+                    a(href="") 
+                        img(src="i/icons/account.svg", alt="")
+                        p Личный кабинет
+            .header_nav
+                .header_nav__title
+                    p КАТАЛОГИ
+                .header_nav__catalog
+                    ul.header_nav__catalog__list
+                        each key in ['Запчасти', 'Агрегаты', 'Ремонт', 'Спецтехника', 'Экспресс-доставка', 'О компании', 'Контакты']
+                            li.header_nav__catalog__item= key
+                a(href="") 
+                    .header_nav__search
+                        img(src="i/icons/search.svg", alt="")

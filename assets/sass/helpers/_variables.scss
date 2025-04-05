@@ -1,5 +1,5 @@
 // Global
-$header: 12.5rem;
+// $header: 12.5rem;
 $footer: 25.4rem;
 
 // Mobile
@@ -9,16 +9,11 @@ $footer_mob: 10rem;
 $pbm: 8rem;
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_0: "AmaticSC-Bold", sans-serif;
-$font_1: "Montserrat-Light", sans-serif;
-$font_2: "Montserrat-Regular", sans-serif;
-$font_3: "Montserrat-Medium", sans-serif;
-$font_4: "Montserrat-SemiBold", sans-serif;
-$font_5: "Montserrat-Bold", sans-serif;
-$font_6: "Rubik-Medium", sans-serif;
-$font_7: "Rubik-Light", sans-serif;
-$font_8: "Rubik-Regular", sans-serif;
-$font_9: "Rubik-Bold", sans-serif;
+$font_bnc: "BebasNeueCyrillic", sans-serif;
+$font_rl: "Roboto-Light", sans-serif;
+$font_rr: "Roboto-Regular", sans-serif;
+$font_rsb: "Roboto-SemiBold", sans-serif;
+$font_rb: "Roboto-Bold", sans-serif;
 
 $font_size_base: 1.6rem;
 //---------------------------------------------fonts###
@@ -27,22 +22,19 @@ $font_size_base: 1.6rem;
 $white: #fff;
 $black: #000;
 
-$darkgrey: #555555;
-$pink: #ff0956;
-$blue: #2269ea;
-$yellow: #f5e084;
+$lightergrey: #EFEFEF;
+$lightgrey: #D9D9D9;
+$grey: #A7A7A7;
+$darkgrey: #383837;
+$darkergrey: #323232;
 
-$darker: #030a1b;
-$dark: #1c202c;
+$yellow: #FDC043;
+$lightyellow: #FDCF72;
+$darkyellow: #FDC043;
 
-$mediumBlue: #b7d8ff;
-$lightblue: #f3f9ff;
-
-$grey: #787c89;
-
-$color_text_base: $dark;
-$color_link_base: $dark;
-$body_bg: $white;
+$color_text_base: $white;
+$color_link_base: $white;
+$body_bg: $lightergrey;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index

@@ -1,5 +1,7 @@
 // Fonts include //
 
-// @include font_face("AmaticSC-Bold", "AmaticSC-Bold", $font_path, 400);
-// @include font_face("Montserrat-Light", "Montserrat-Light", $font_path, 300);
-// @include font_face("Montserrat-Regular", "Montserrat-Regular", $font_path, 400);
+@include font_face('BebasNeueCyrillic', 'BebasNeueCyrillic', $font-path, 400);
+@include font_face('Roboto-Bold', 'Roboto-Bold', $font-path, 700);
+@include font_face('Roboto-Light', 'Roboto-Light', $font-path, 300);
+@include font_face('Roboto-Regular', 'Roboto-Regular', $font-path, 400);
+@include font_face('Roboto-SemiBold', 'Roboto-SemiBold', $font-path, 600);

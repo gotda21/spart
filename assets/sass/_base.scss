@@ -5,7 +5,7 @@
 
 html {
 	height: 100%;
-	font: 400 calc(100vw / 1920 * 10)/1.33 $font_1;
+	font: 400 calc(100vw / 1920 * 10)/1.33 $font_rr;
 	// scroll-behavior: smooth;
 	// user-select: none;
 	@include bp($point_2) {
@@ -26,7 +26,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	// background: $body_bg;
+	background: $body_bg;
 	@include bp($point_2) {
 		font-size: 1.8rem;
 	}
@@ -50,6 +50,7 @@ body {
 .base {
 	width: 100%;
 	position: relative;
+	background-color: $lightergrey;
 	// padding: $header 0 0;
 
 	flex: 1 0 auto;

@@ -2,11 +2,130 @@
 	// position: fixed;
 	top: 0;
 	left: 0;
-	height: $header;
+	// height: $header;
 	width: 100%;
 	will-change: transform;
 	@include z-index(header);
+}
 
-	// НЕ ЗАБЫТЬ УДАЛИТЬ
-	display: none;
+.header_main {
+	display: flex;
+	flex-direction: column;
+}
+
+.header_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 36rem;
+	background-color: $darkgrey;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.header_top__logo {
+	width: 14.3rem;
+	height: 6.1rem;
+}
+
+.header_top__location {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	font-family: $font_rl;
+}
+
+.header_top__location img {
+	width: 1.5rem;
+	height: 2rem;
+}
+
+.header_top__number {
+	display: flex;
+	gap: 2.4rem;
+	align-items: center;
+}
+
+.header_top__number_button button {
+	display: flex;
+	gap: .8rem;
+	align-items: center;
+	padding: 1rem 2rem;
+	background-color: $yellow;
+	border-radius: 12rem;
+}
+
+.header_top__number_button img {
+	width: 3.5rem;
+	height: 3.5rem;
+	background-color: $lightyellow;
+	padding: .8rem;
+	border-radius: 12rem;
+}
+
+.header_top__number_button p {
+	font-family: $font_rb;
+}
+
+.header_top__number_icon {
+	width: 3rem;
+	height: 3rem;
+}
+
+.header_top__cart a {
+	display: flex;
+	gap: 1rem;
+	font-family: $font_rl;
+}
+
+.header_top__cart img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.header_top__account a {
+	display: flex;
+	font-family: $font_rl;
+	gap: 1rem;
+	align-items: center;
+}
+
+.header_top__account img {
+	width: 1.2rem;
+	height: 1.6rem;
+}
+
+.header_nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 36rem;
+	background-color: $white;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: $darkergrey;
+}
+
+.header_nav__title {
+	padding: 2.4rem 3rem;
+	background-color: $darkyellow;
+	font-family: $font_rb;
+}
+
+.header_nav__catalog__list {
+	display: flex;
+	gap: 3rem;
+	font-family: $font_rsb;
+}
+
+.header_nav__search {
+	padding: 2rem;
+	background-color: $darkyellow;
+}
+
+.header_nav__search img {
+	width: 3rem;
+	height: 3rem;
 }

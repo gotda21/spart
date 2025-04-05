@@ -7,19 +7,12 @@ img {
 
 h1 {
 	font-size: 4.8rem;
-	font-family: $font_3;
-	color: $dark;
+	font-family: $font_bnc;
+	color: $darkergrey;
 	line-height: 5.6rem;
 	@include bp($point_2) {
 		font-size: 3.2rem;
 		line-height: 4.6rem;
-	}
-
-	span.pink {
-		color: $pink;
-	}
-	span.blue {
-		color: $blue;
 	}
 }
 // End
@@ -29,19 +22,12 @@ h4,
 h5,
 h6 {
 	font-size: 4.8rem;
-	font-family: $font_2;
+	font-family: $font_bnc;
 	font-weight: 500;
-	color: $blue;
 	line-height: 5.6rem;
 	@include bp($point_2) {
 		font-size: 2.6rem;
 		line-height: 3rem;
-	}
-	span.pink {
-		color: $pink;
-	}
-	span.blue {
-		color: $blue;
 	}
 }
 
