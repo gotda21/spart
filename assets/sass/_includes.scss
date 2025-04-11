@@ -1,6 +1,12 @@
 // variables,mixins,extends
 @import "helpers/helpers_all";
 @import "family";
+@import "helpers/ui";
+
+// plugins
+@import "plugins/swiper-bundle";
+// @import "plugins/fancybox";
+// @import "plugins/simplebar";
 
 // base
 @import "reset";
@@ -17,6 +23,8 @@
 
 // Blocks
 @import "blocks/sections";
+@import "blocks/hero";
+@import "blocks/brands";
 
 
 // icons
@@ -28,7 +36,3 @@
 // @import "page/home";
 // @import "page/policy";
 
-// plugins
-@import "plugins/swiper-bundle";
-// @import "plugins/fancybox";
-// @import "plugins/simplebar";

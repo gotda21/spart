@@ -1,0 +1,22 @@
+// SLIDER - BUTTONS
+
+.button-prev.swiper-button-disabled, .button-next.swiper-button-disabled {
+    transition: .2s all ease-in-out;
+    background-color: $semigrey;
+}
+
+.button-prev, .button-next {
+    background-color: $darkyellow;
+    // position: absolute;
+    border-radius: 100%;
+    padding: .8rem;
+    z-index: 10;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.swiper-pagination-horizontal {
+    width: auto!important;
+    z-index: 10;
+}

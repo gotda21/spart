@@ -3,3 +3,36 @@ extends _layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Главная страница'}
 block content_block
+
+	section.hero
+			.hero_circle
+				img(src="i/hero/hero_bg_circle.png", alt="")
+			.hero_swiper.swiper
+				.hero_main.swiper-wrapper
+					-for(i = 0; i < 4; i++)
+						.hero_main_slide.swiper-slide 
+							.section_in 
+								.hero_main_slide_general
+									.hero_main_content 
+										.hero_main_content_title
+											h2 Поставка двигателей<br>для спецтехники
+										.hero_main_content__items
+											ul.hero_main_content__list
+												each item in [{icon: 'hero', title: 'Fectetuer', subtitle: 'Fectetuer adipiscing elit.commodo ligula'},{icon: 'hero', title: 'Fectetuer', subtitle: 'Fectetuer adipiscing elit.commodo ligula'},{icon: 'hero', title: 'Fectetuer', subtitle: 'Fectetuer adipiscing elit.commodo ligula'}]
+													li.hero_main_content__item
+														.hero_main_content__icon
+															img(src=`i/hero/${item.icon}.svg`, alt=item.title)
+														.hero_main_content__title
+															h3= item.title
+														.hero_main_content__subtitle
+															p= item.subtitle
+									.hero_main_image
+										img(src="i/hero/hero_slide1.png", alt="")
+				.hero_navigation 
+					.hero_button-prev.button-next
+						img(src="i/icons/arrow_prev.svg", alt="")
+					.hero_pagination
+					.hero_button-next.button-next
+						img(src="i/icons/arrow_next.svg", alt="")
+	
+	include blocks/brands

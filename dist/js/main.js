@@ -17,21 +17,21 @@ $(document).ready(function ($) {
 	
 });
 
-$(window).on('load', function () {
-	updateSizes();
-	loadFunc();
-	// allDefautAnim();
-	// burgerMobile();
-	scrollNav();
-	if(windowWidth > mediaPoint1) {
-		popup('14px', '.send_form', '.popup_send');
-		popup('14px', '.call_form', '.popup_call');
-	} else {
-		popup('0', '.send_form', '.popup_send');
-		popup('0', '.call_form', '.popup_call');
-		burgerMobile();
-	}
-});
+// $(window).on('load', function () {
+// 	updateSizes();
+// 	loadFunc();
+// 	// allDefautAnim();
+// 	// burgerMobile();
+// 	scrollNav();
+// 	if(windowWidth > mediaPoint1) {
+// 		popup('14px', '.send_form', '.popup_send');
+// 		popup('14px', '.call_form', '.popup_call');
+// 	} else {
+// 		popup('0', '.send_form', '.popup_send');
+// 		popup('0', '.call_form', '.popup_call');
+// 		burgerMobile();
+// 	}
+// });
 
 $(window).on('resize', function () {
 	resizeFunc();
@@ -115,34 +115,60 @@ var styles = ['color: red', 'background: transparent'].join(';');
 var message = 'Developed by KotoFeelGood https://api.whatsapp.com/send?phone=79615311386&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0';
 console.info('%c%s', styles, message);
 
-// const reviewsSlider = new Swiper('.reviews_slider ', {
-// 	// centeredSlides: true,
-// 	// centeredSlidesBounds: true,
-// 	allowTouchMove: true,
-// 	loop: true,
-// 	grabCursor: true,
-// 	a11y: true,
-// 	keyboard: {
-//     enabled: true,
-//     onlyInViewport: false,
-//   },
-// 	breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//       spaceBetween: 50,
-// 			freeMode: false,
-//     },
-//     480: {
-//       slidesPerView: 1,
-//       spaceBetween: 50,
-// 			freeMode: false,
-//     },
-//     640: {
-//       slidesPerView: 3,
-//       spaceBetween: 30
-//     }
-// 	}
-// });
+const heroSlider = new Swiper('.hero_swiper', { 
+	// loop: true,
+	slidesPerView: 1, // Показывать только 1 слайд
+	spaceBetween: 0,
+	// watchSlidesProgress: true, // Следить за прогрессом слайдов
+	loop: false, // Отключить бесконечный цикл (если нужно)
+	allowTouchMove: true, 
+	grabCursor: true,     
+	effect: 'slide',       
+	speed: 600,             
+	
+	
+	// watchSlidesProgress: true,
+	// watchSlidesVisibility: true,
+	// slideToClickedSlide: false,
+	// freeMode: false,       
+	// resistance: false,   
+	navigation: {
+		enabled: true,
+		nextEl: '.hero_button-next',
+		prevEl: '.hero_button-prev',
+	},
+	pagination: {
+		el: '.hero_pagination',
+		clickable: true,
+	},
+	// scrollbar: {
+	// 	// enabled: true,
+	// 	el: '.hero_main_swiper_swiper_scrollbar',
+	// },
+});
+
+const brandsSlider = new Swiper('.brands_swiper', { 
+	slidesPerView: 6,
+	 // Показывать только 1 слайд
+	spaceBetween: 44,
+	// watchSlidesProgress: true, // Следить за прогрессом слайдов
+	allowTouchMove: true,
+	grabCursor: true,
+	effect: 'slide',
+	speed: 600,
+	
+	
+	// watchSlidesProgress: true,
+	// watchSlidesVisibility: true,
+	// slideToClickedSlide: false,
+	freeMode: false,
+	resistance: false,   
+	navigation: {
+		enabled: true,
+		nextEl: '.brands_button-next',
+		prevEl: '.brands_button-prev',
+	},
+});
 
 $(document).ready(function() {
 	const btns = document.querySelectorAll('.btn')
@@ -298,35 +324,35 @@ Array.from(btnSubmit).map((item) => {
 
 // accordion('.faq_item_head', '.faq_item_content');
 
-function popup(style, btn, popups) {
+// function popup(style, btn, popups) {
 
-	let trigger = document.querySelectorAll(btn);
-	let pop = document.querySelector(popups)
+// 	let trigger = document.querySelectorAll(btn);
+// 	let pop = document.querySelector(popups)
 
-	let remove = pop.querySelectorAll('.remove_popup')
-
-
-
-	trigger.forEach(item => {
-		item.addEventListener('click', () => {
-			pop.classList.add('active')
-			win.style.overflow = "hidden";
-			win.style.paddingRight = style; 
-		})
-	});
-
-	remove.forEach(item => {
-		item.addEventListener('click', () => {
-			pop.classList.remove('active')
-			win.style.overflow = "";
-			win.style.paddingRight = ""; 
-		})
-	});
+// 	let remove = pop.querySelectorAll('.remove_popup')
 
 
 
+// 	trigger.forEach(item => {
+// 		item.addEventListener('click', () => {
+// 			pop.classList.add('active')
+// 			win.style.overflow = "hidden";
+// 			win.style.paddingRight = style; 
+// 		})
+// 	});
 
-}
+// 	remove.forEach(item => {
+// 		item.addEventListener('click', () => {
+// 			pop.classList.remove('active')
+// 			win.style.overflow = "";
+// 			win.style.paddingRight = ""; 
+// 		})
+// 	});
+
+
+
+
+// }
 $(document).ready(function()  {
 
 	var inputsTel = document.querySelectorAll('input[type="tel"]');

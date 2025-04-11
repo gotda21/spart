@@ -1,0 +1,117 @@
+.hero {
+    position: relative;
+    background-image: url(/i/hero/hero_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero_circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    overflow: hidden;
+}
+
+.hero_main_slide {
+    display: flex;
+}
+
+.hero_main_content {
+    max-width: 73.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.hero_main_slide_general {
+    padding: 22.6rem 0;
+}
+
+.hero_main_content__list {
+    display: flex;
+    gap: 5rem;
+}
+
+.hero_main_content_title h2 {
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 113%;
+    letter-spacing: 0.01em;
+    color: $darkergrey;
+}
+
+.hero_main_content__icon {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+}
+
+.hero_main_content__title h3 {
+    font-family: $font_rsb;
+    font-size: 2.5rem;
+    line-height: 140%;
+    color: $darkergrey;
+}
+
+.hero_main_content__subtitle p {
+    font-family: $font_rr;
+    font-size: 2rem;
+    line-height: 175%;
+    color: $darkergrey;
+}
+
+.hero_main_slide {
+    width: 100%!important;
+}
+
+.hero_main_image {
+    position: absolute;
+    width: 90rem;
+    right: 0;
+    top: -15%;
+}
+
+.hero_button-prev, .hero_button-next {
+    position: relative;
+    width: 4rem;
+}
+
+// .hero_pagination.swiper-pagination-horizontal{
+//     position: absolute;
+//     bottom: 13.1rem;
+//     z-index: 10;
+//     width: auto;
+//     right: 39rem;
+//     left: auto;
+// }
+
+
+
+.swiper-pagination-bullets {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.swiper-pagination-bullet {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: $semigrey;
+    opacity: 1;
+    transition: .2s all ease-in-out;
+    margin: 0!important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $darkyellow;
+}
+
+.hero_navigation {
+    display: flex;
+    align-items: center;
+    gap: 2.7rem;
+    position: absolute;
+    bottom: 8rem;
+    right: 36rem;
+}

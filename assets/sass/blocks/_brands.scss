@@ -1,0 +1,30 @@
+.brands {
+    background-color: $white;
+}
+
+.brands_swiper {
+    width: 100rem;
+}
+
+.brands_main_logo__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brands_swiper__w {
+    position: relative;
+}
+
+.brands_navigation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+}
