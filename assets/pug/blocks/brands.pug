@@ -1,20 +1,21 @@
-seciton.brands 
-    .section_in 
-        .brands_swiper__w
-            .brands_swiper.swiper
-                ul.brands_main_logo__list.swiper-wrapper
-                    each logo in [{icon: 'hyundai'}, {icon: 'cat'}, {icon: 'sdec'}, {icon: 'tto'}, {icon: 'shantui'}, {icon: 'hyundai'}, {icon: 'hyundai'}, {icon: 'cat'}, {icon: 'sdec'}, {icon: 'tto'}, {icon: 'shantui'}, {icon: 'hyundai'},]
-                        li.brands_main_slide.swiper-slide
-                            .brands_main_logo
-                                img(src=`i/brands/${logo.icon}.svg`)
-                    //- .brands_main_slide.swiper-slide
-                    //-     ul.brands_main_logo__list
-                    //-         each logo in [{icon: 'hyundai'}, {icon: 'cat'}, {icon: 'sdec'}, {icon: 'tto'}, {icon: 'shantui'}, {icon: 'hyundai'}, ]
-                    //-             li.brands_main_logo__item
-                    //-                 .brands_main_logo
-                    //-                     img(src=`i/brands/${logo.icon}.svg`)
-            .brands_navigation
-                .brands_button-prev.button-prev
-                    img(src="i/icons/arrow_prev.svg", alt="")
-                .brands_button-next.button-next
-                    img(src="i/icons/arrow_next.svg", alt="")
+seciton.brands
+    .brands_main 
+        .section_in
+            .brands_swiper__w
+                .brands_swiper.swiper
+                    ul.brands_main_logo__list.swiper-wrapper
+                        each logo in [{icon: 'hyundai'}, {icon: 'cat'}, {icon: 'sdec'}, {icon: 'tto'}, {icon: 'shantui'}, {icon: 'hyundai'}, {icon: 'hyundai'}, {icon: 'cat'}, {icon: 'sdec'}, {icon: 'tto'}, {icon: 'shantui'}, {icon: 'hyundai'},]
+                            li.brands_main_slide.swiper-slide
+                                .brands_main_logo
+                                    img(src=`i/brands/${logo.icon}.svg`)
+                        //- .brands_main_slide.swiper-slide
+                        //-     ul.brands_main_logo__list
+                        //-         each logo in [{icon: 'hyundai'}, {icon: 'cat'}, {icon: 'sdec'}, {icon: 'tto'}, {icon: 'shantui'}, {icon: 'hyundai'}, ]
+                        //-             li.brands_main_logo__item
+                        //-                 .brands_main_logo
+                        //-                     img(src=`i/brands/${logo.icon}.svg`)
+                .brands_navigation
+                    .brands_button-prev.button-prev
+                        img(src="i/icons/arrow_prev.svg", alt="")
+                    .brands_button-next.button-next
+                        img(src="i/icons/arrow_next.svg", alt="")

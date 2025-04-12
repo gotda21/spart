@@ -1,0 +1,26 @@
+section.question
+    .section_in
+        .question_main
+            .question_content
+                .question_content_title
+                    h2 Вопрос менеджеру
+                .question_content_descr
+                    p Если у Вас есть сложности с выбором товара или другие вопросы, то Вы можете получить консультацию у наших менеджеров в рабочие часы компании.
+                ul.question_content__list
+                    form
+                        li.question_content__item
+                            .question_content__name
+                                input(type="text" placeholder="Ваше имя")
+                        li.question_content__item
+                            .question_content__phone
+                                input(type="tel" placeholder="Ваш телефон")
+                        li.question_content__item
+                            .question_content__button
+                                +button({name:"Отправить вопрос менеджеру", theme: "primary"})
+                        li.question_content__item
+                            .question_content__agreement
+                                input(type="checkbox" id="agreement" value="Согласен на обработку персональных данных.")
+                                label(for="agreement") Нажимая на кнопку, вы даете согласие на 
+                                    a(href="#") обработку персональных данных
+            .question_image
+                img(src="i/question/question_image.png", alt="")

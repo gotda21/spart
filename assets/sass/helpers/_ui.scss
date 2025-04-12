@@ -20,3 +20,66 @@
     width: auto!important;
     z-index: 10;
 }
+
+// SLIDER - BUTTONS
+
+// SMALL LIST
+.small_list_content__icon {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+}
+
+.small_list_content__title h3 {
+    font-family: $font_rsb;
+    font-size: 2.5rem;
+    line-height: 140%;
+    color: $darkergrey;
+}
+
+.small_list_content__subtitle p {
+    font-family: $font_rr;
+    font-size: 2rem;
+    line-height: 175%;
+    color: $darkergrey;
+}
+// SMALL LIST
+
+.btn{
+	display: flex;
+	align-items: center;
+	background-size: contain;
+	button  {
+        transition: .3s all ease-in-out;
+        border-radius: 12rem;
+		padding: 1.7rem 3rem;
+        span {
+            font-family: $font_rb;
+            transition: .3s all ease-in-out;
+        }
+        text-transform: uppercase;
+		@include app;
+		@include flex-center;
+		@include bp($point_2) {
+			font-size: 1.4rem;
+		}
+	}
+    
+    &.top button {
+        background-color: $darkyellow;
+        gap: 1rem;
+    }
+
+    &.primary button {
+        background-color: $darkyellow;
+    }
+
+	&.secondary {
+        :hover {
+            background-color: $darkyellow;
+        }
+        button {
+            background-color: $semilightgrey;
+        }
+	}
+}

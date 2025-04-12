@@ -1,0 +1,136 @@
+.question {
+    background-image: url(/i/question/question_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 0rem 0 0 30rem;
+}
+
+.question_main {
+    padding: 11rem 0rem 20rem 0rem;
+    display: flex;
+}
+
+.question_content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 75rem;
+}
+
+.question_content_descr p{
+    font-size: 2rem;
+    line-height: 175%;
+    font-family: $font_rr;
+}
+
+.question_content__list form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(38%, 1fr));
+    gap: 3.4rem;
+}
+
+.question_content__item:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.question_content__name input[type=text], .question_content__phone input[type=tel]{
+    border-radius: 12rem;
+    padding: 3.3rem 4rem;
+    border: none;
+    width: 100%;
+}
+
+.question_content__name input[type=text]::placeholder, .question_content__phone input[type=tel]::placeholder {
+    font-family: $font_rl;
+    color: $darkergrey;
+    line-height: 194%;
+    font-size: 1.8rem;
+}
+
+.question_content__button button {
+    width: 100%;
+    padding: 3.3rem 3rem;
+}
+
+.question_content__agreement {
+    display: flex;
+    gap: 2.5rem;
+    position: relative;
+}
+
+.question_content__agreement {
+	input {
+		display: none;
+
+		&:checked + label {
+			&:after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	label {
+		position: relative;
+		padding-left: 5rem;
+		user-select: none;
+        line-height: 139%;
+        font-family: $font_rr;
+        a {
+            text-decoration: underline;
+            color: $darkyellow;
+            font-family: $font_rb;
+        }
+		cursor: pointer;
+		@include bp($point_2) {
+			font-size: 1.2rem;
+			padding-left: 2rem;
+		}
+		&:before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 3rem;
+			height: 3rem;
+            background-color: #fff;
+			border-radius: 100%;
+			content: "";
+
+			@include bp($point_2) {
+				width: 1.4rem;
+				height: 1.4rem;
+			}
+		}
+
+		&:after {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+            background-image: url(/i/icons/check.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            left: 0.5rem;
+            width: 2rem;
+            height: 2rem;
+			content: "";
+			visibility: hidden;
+
+			@include bp($point_2) {
+				width: 0.8rem;
+				height: 0.8rem;
+				left: 0.3rem;
+			}
+		}
+	}
+}
+
+.question_image {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

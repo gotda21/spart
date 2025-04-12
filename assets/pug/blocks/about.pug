@@ -1,0 +1,16 @@
+section.about
+    .section_in
+        .about_main
+            .about_top
+                .about_top_image
+                    img(src="i/about/about_background_left.png", alt="")
+                .about_top_text
+                    .about_top_text_title
+                        h2 О компании
+                    .about_top_text_descr
+                        p Gd ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                        p Kst, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu
+            .about_bottom 
+                ul.about_bottom__list
+                    -for(i = 0; i < 3; i++)
+                        +small_list({title:'Sed ut perspiciatis', subtitle:'ed ut perspiciatis unde omnis i natus error sit voluptatem accusantium doloremque laudantium, totam rem', icon: 'about'})

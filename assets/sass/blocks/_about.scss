@@ -1,0 +1,71 @@
+.about {
+    background-image: url(/i/about/about_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 0 0 30rem 0;
+}
+
+.about_main {
+    display: flex;
+    flex-direction: column;
+    gap: 13rem;
+    padding: 11rem 0;
+}
+
+.about_top {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.about_top_image {
+    width: 90rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.about_top_text {
+    max-width: 71rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about_top_text_title h2 {
+    font-size: 5.5rem;
+}
+
+.about_top_text_descr {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about_top_text_descr p {
+    font-size: 2rem;
+    line-height: 175%;
+    font-family: $font_rr;
+}
+
+.about_bottom {
+    z-index: 2;
+}
+
+.about_bottom__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.about_bottom__list .small_list_content__title h3, .about_bottom__list .small_list_content__subtitle p {
+    color: $white;
+}
+
+.about_bottom__list .small_list_content__subtitle p {
+    font-family: $font_rl;
+}
+

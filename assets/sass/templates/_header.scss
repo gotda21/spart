@@ -48,7 +48,7 @@
 	align-items: center;
 }
 
-.header_top__number_button button {
+.header_top__number_button a {
 	display: flex;
 	gap: .8rem;
 	align-items: center;
@@ -119,6 +119,14 @@
 	display: flex;
 	gap: 3rem;
 	font-family: $font_rsb;
+}
+
+.header_nav__catalog__item a {
+	color: $darkergrey;
+}
+
+.header_nav__catalog__item a:hover {
+	color: $lighteryellow;
 }
 
 .header_nav__search {

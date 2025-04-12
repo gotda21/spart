@@ -11,7 +11,7 @@ header.header
                         p Магадан
                     .header_top__number
                         .header_top__number_button
-                            button 
+                            a(href="") 
                                 img(src="i/icons/phone.svg", alt="")
                                 p +7 423 202 55 02
                         .header_top__number_icon
@@ -32,8 +32,9 @@ header.header
                         p КАТАЛОГИ
                     .header_nav__catalog
                         ul.header_nav__catalog__list
-                            each key in ['Запчасти', 'Агрегаты', 'Ремонт', 'Спецтехника', 'Экспресс-доставка', 'О компании', 'Контакты']
-                                li.header_nav__catalog__item= key
+                            each key in [{name:'Запчасти', link:'#'}, {name:'Агрегаты', link:'#'}, {name:'Ремонт', link:'#'}, {name:'Спецтехника', link:'#'}, {name:'Экспресс-доставка', link:'#'}, {name:'О компании', link:'#'}, {name:'Контакты', link:'#'}]
+                                li.header_nav__catalog__item
+                                    a(href=key.link)=key.name
                     button.header_nav__search
                         .header_nav__search_icon
                             img(src="i/icons/search.svg", alt="")

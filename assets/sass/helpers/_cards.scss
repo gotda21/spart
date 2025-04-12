@@ -1,0 +1,116 @@
+.cards_main {
+    padding: 12.6rem 0;
+}
+
+.cards_top_title h2 {
+    font-size: 5.5rem;
+    color: $darkergrey;
+}
+
+.cards_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.cards_content__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 3.7rem;
+}
+
+.cards_content__item {
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.cards_content__item_inner {
+    padding: 1.5rem 1.7rem 2.5rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cards_content__item_inner::before {
+    position: absolute;
+    content: "";
+    background-image: url(/i/cards/background_gear.png);
+    width: 10rem;
+    height: 10rem;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 1rem;
+}
+
+.cards_content__item_availability {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cards_content__item_availability img {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: $darkyellow;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.cards_content__item_availability span {
+    font-family: $font_rr;
+    font-size: 1.8rem;
+    color: $grey;
+}
+
+.cards_content__item_title h3 {
+    font-size: 2rem;
+    line-height: 150%;
+    color: $darkergrey;
+    font-family: $font_rr;
+}
+
+.cards_content__item_producer p {
+    font-family: $font_rr;
+    font-size: 1.8rem;
+    color: $grey;
+}
+
+.cards_content__item_producer span {
+    color: $darkyellow;
+}
+
+.cards_content__item_price p {
+    font-family: $font_rb;
+    color: $darkergrey;
+    font-size: 2.5rem;
+}
+
+.cards_content__item_inner_other {
+    padding: 1.5rem 1.7rem 6rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards_content__item_inner_other::before {
+    position: absolute;
+    content: "";
+    background-image: url(/i/cards/background_gear.png);
+    width: 10rem;
+    height: 10rem;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 1rem;
+}
+
+.cards_content__item_title_other {
+    margin-bottom: 4rem;
+}
+
+.cards_content__item_title_other h3 {
+    font-family: $font_rb;
+    color: $darkergrey;
+    font-size: 2.5rem;
+    line-height: 120%;
+}

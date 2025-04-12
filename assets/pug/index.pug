@@ -18,14 +18,8 @@ block content_block
 											h2 Поставка двигателей<br>для спецтехники
 										.hero_main_content__items
 											ul.hero_main_content__list
-												each item in [{icon: 'hero', title: 'Fectetuer', subtitle: 'Fectetuer adipiscing elit.commodo ligula'},{icon: 'hero', title: 'Fectetuer', subtitle: 'Fectetuer adipiscing elit.commodo ligula'},{icon: 'hero', title: 'Fectetuer', subtitle: 'Fectetuer adipiscing elit.commodo ligula'}]
-													li.hero_main_content__item
-														.hero_main_content__icon
-															img(src=`i/hero/${item.icon}.svg`, alt=item.title)
-														.hero_main_content__title
-															h3= item.title
-														.hero_main_content__subtitle
-															p= item.subtitle
+												-for(j = 0; j < 3; j++)
+													+small_list({title:'Fectetuer', subtitle:'Fectetuer adipiscing elit.commodo ligula', icon: 'hero'})
 									.hero_main_image
 										img(src="i/hero/hero_slide1.png", alt="")
 				.hero_navigation 
@@ -36,3 +30,8 @@ block content_block
 						img(src="i/icons/arrow_next.svg", alt="")
 	
 	include blocks/brands
+	+cards({title: 'Агрегаты', image: 'engine', availability: 'в наличии', cardtitle: 'Двигатель Shanghai (Pengpu) SC10E380Q5', producer: 'Shanghai', price: '573 100'})
+	include blocks/about
+	+cards({title: 'Оригинальные запчасти', image: 'engine', availability: 'в наличии', cardtitle: 'Двигатель Shanghai (Pengpu) SC10E380Q5', producer: 'Shanghai', price: '573 100'})
+	include blocks/question
+	+cards({title: 'Ремонт спецтехники', image: 'excavator', cardtitle: 'Название спецтехники'})
