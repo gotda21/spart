@@ -23,6 +23,28 @@
 
 // SLIDER - BUTTONS
 
+// SLIDER - NAVIGATION
+
+.swiper-pagination-bullets {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.swiper-pagination-bullet {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: $semigrey;
+    opacity: 1;
+    transition: .2s all ease-in-out;
+    margin: 0!important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $darkyellow;
+}
+
+// SLIDER - NAVIGATION
+
 // SMALL LIST
 .small_list_content__icon {
     width: 6rem;
@@ -30,11 +52,31 @@
     margin-bottom: 1rem;
 }
 
+.small_list_content__item {
+    @include bp($point_2) {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+}
+
 .small_list_content__title h3 {
     font-family: $font_rsb;
     font-size: 2.5rem;
     line-height: 140%;
     color: $darkergrey;
+
+    @include bp($point_2) {
+        font-size: 2rem;
+    }
+}
+
+.small_list_content__subtitle {
+    @include bp($point_2) {
+        max-width: 20rem;
+        text-align: center;
+    }
 }
 
 .small_list_content__subtitle p {
@@ -42,6 +84,10 @@
     font-size: 2rem;
     line-height: 175%;
     color: $darkergrey;
+
+    @include bp($point_2) {
+        font-size: 1.6rem;
+    }
 }
 // SMALL LIST
 

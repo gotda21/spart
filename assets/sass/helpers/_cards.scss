@@ -1,22 +1,72 @@
+// CARDS MOBILE //
+
+.cards_top .btn.top {
+    display: none;
+}
+
+.cards_content_button__mobile {
+    @include bp($point_2, $direction: min) {
+        display: none;
+    }
+}
+
+.cards_navigation {
+    @include bp($point_2, $direction: min) {
+        display: none;
+    }
+    display: flex;
+    align-items: center;
+    gap: 2.7rem;
+}
+
+// CARDS MOBILE //
+
 .cards_main {
     padding: 12.6rem 0;
+    
+    @include bp($point_2) {
+        padding: 6.5rem 0;
+    }
 }
 
 .cards_top_title h2 {
     font-size: 5.5rem;
     color: $darkergrey;
+
+    @include bp($point_2) {
+        font-size: 3.5rem;
+    }
 }
 
 .cards_top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 3rem;
+
+    @include bp($point_2) {
+        justify-content: center;
+    }
+}
+
+.cards_content {
+    @include bp($point_2) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
 }
 
 .cards_content__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-    gap: 3.7rem;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)) !important;
+    gap: 3.7rem !important;
+
+    @include bp($point_2) {
+        display: flex !important;
+        grid-template-columns: unset !important;
+        gap: 0 !important;
+    }
 }
 
 .cards_content__item {
@@ -61,6 +111,10 @@
     font-family: $font_rr;
     font-size: 1.8rem;
     color: $grey;
+
+    @include bp($point_2) {
+        font-size: 1.6rem;
+    }
 }
 
 .cards_content__item_title h3 {
@@ -68,12 +122,20 @@
     line-height: 150%;
     color: $darkergrey;
     font-family: $font_rr;
+
+    @include bp($point_2) {
+        font-size: 1.8rem;
+    }
 }
 
 .cards_content__item_producer p {
     font-family: $font_rr;
     font-size: 1.8rem;
     color: $grey;
+
+    @include bp($point_2) {
+        font-size: 1.6rem;
+    }
 }
 
 .cards_content__item_producer span {
@@ -84,6 +146,10 @@
     font-family: $font_rb;
     color: $darkergrey;
     font-size: 2.5rem;
+
+    @include bp($point_2) {
+        font-size: 2.2rem;
+    }
 }
 
 .cards_content__item_inner_other {

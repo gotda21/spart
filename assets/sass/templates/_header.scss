@@ -23,18 +23,157 @@
 	gap: 9rem;
 	align-items: center;
 	padding: 1.5rem 0;
+
+	@include bp($point_2) {
+		gap: 3rem;
+		padding: 1rem 0;
+	}
 }
 
 .header_top__logo {
 	width: 14.3rem;
 	height: 6.1rem;
+
+	@include bp($point_2) {
+		width: 9.2rem;
+        height: 4.2rem;
+	}
 }
+
+
+// HEADER - MOBILE
+
+.header_contacts_phone__mobile {
+	@include bp($point_2, $direction: min) {
+		display: none;
+	}
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header_contacts_phone_connect__mobile {
+	display: flex;
+	gap: .6rem;
+	align-items: center;
+}
+
+.header_contacts_phone_connect__mobile a {
+	display: flex;
+	gap: .6rem;
+	align-items: center;
+	font-size: 1.4rem;
+	font-family: $font_rb;
+}
+
+.header_contacts_phone_connect__mobile img {
+	width: 1.3rem;
+	height: 1.3rem;
+}
+
+.header_contacts_phone_icon__mobile img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.header_contacts_phone_button__mobile button {
+	font-family: $font_rr;
+	color: $darkyellow;
+	text-decoration: underline;
+	font-size: 1.4rem;
+}
+
+.header_top__search_mobile {
+	@include bp($point_2, $direction: min) {
+		display: none;
+	}
+	height: 2.7rem;
+}
+
+.header_nav__mobile {
+	@include bp($point_2, $direction: min) {
+		display: none;
+	}
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.header_nav__location__mobile, .header_nav__cart__mobile a, .header_nav__account__mobile a {
+	display: flex;
+	gap: .7rem;
+	align-items: center;
+}
+
+.header_nav__location__mobile img, .header_nav__cart__mobile img, .header_nav__account__mobile img {
+	width: 1.5rem;
+	height: 1.7rem;
+}
+
+.header_nav__location__mobile p, .header_nav__cart__mobile p, .header_nav__account__mobile p {
+	font-family: $font_rr;
+	font-size: 1.6rem;
+	color: $darkgrey;
+}
+
+.header_nav__burger__mobile {
+	position: relative;
+	width: 1.7rem;
+	height: 1.6rem;
+	@include flex-center;
+	span {
+		position: absolute;
+		width: 100%;
+		display: block;
+		border-bottom: 0.3rem solid $darkyellow;
+		border-radius: 2rem;
+		transition: all 0.3s ease-in-out;
+
+		&:nth-child(1) {
+			top: 0;
+			left: 0;
+		}
+		&:nth-child(2) {
+			top: 50%;
+			transform: translateY(-50%);
+			width: 80%;
+			right: 0;
+		}
+		&:nth-child(3) {
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&.active {
+		span {
+			&:nth-child(1) {
+				transform: rotate(45deg);
+				top: 51%;
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+				bottom: 42%;
+			}
+		}
+	}
+}
+
+// HEADER - MOBILE
 
 .header_top__location {
 	display: flex;
 	gap: 1rem;
 	align-items: center;
 	font-family: $font_rl;
+	@include bp($point_2) {
+		display: none;
+	}
 }
 
 .header_top__location img {
@@ -46,6 +185,9 @@
 	display: flex;
 	gap: 2.4rem;
 	align-items: center;
+	@include bp($point_2) {
+		display: none;
+	}
 }
 
 .header_top__number_button a {
@@ -74,6 +216,12 @@
 	height: 3rem;
 }
 
+.header_top__cart {
+	@include bp($point_2) {
+		display: none;
+	}
+}
+
 .header_top__cart a {
 	display: flex;
 	gap: 1rem;
@@ -83,6 +231,12 @@
 .header_top__cart img {
 	width: 2rem;
 	height: 2rem;
+}
+
+.header_top__account {
+	@include bp($point_2) {
+		display: none;
+	}
 }
 
 .header_top__account a {
@@ -102,6 +256,9 @@
 }
 
 .header_nav_main {
+	@include bp($point_2, $direction: max) {
+		display: none;
+	}
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

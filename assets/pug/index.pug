@@ -7,6 +7,8 @@ block content_block
 	section.hero
 			.hero_circle
 				img(src="i/hero/hero_bg_circle.png", alt="")
+			.hero_circle__mobile
+				img(src="i/hero/hero_bg_circle_mobile.png", alt="")
 			.hero_swiper.swiper
 				.hero_main.swiper-wrapper
 					-for(i = 0; i < 4; i++)
@@ -19,7 +21,7 @@ block content_block
 										.hero_main_content__items
 											ul.hero_main_content__list
 												-for(j = 0; j < 3; j++)
-													+small_list({title:'Fectetuer', subtitle:'Fectetuer adipiscing elit.commodo ligula', icon: 'hero'})
+													+small_list({title:'Fectetuer', subtitle:'Fectetuer adipiscing elit. commodo ligula', icon: 'hero'})
 									.hero_main_image
 										img(src="i/hero/hero_slide1.png", alt="")
 				.hero_navigation 

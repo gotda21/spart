@@ -117,21 +117,18 @@ console.info('%c%s', styles, message);
 
 const heroSlider = new Swiper('.hero_swiper', { 
 	// loop: true,
+	breakpoints: {
+		1024: {
+			slidesPerView: 1,
+		}
+	},
 	slidesPerView: 1, // Показывать только 1 слайд
 	spaceBetween: 0,
-	// watchSlidesProgress: true, // Следить за прогрессом слайдов
 	loop: false, // Отключить бесконечный цикл (если нужно)
 	allowTouchMove: true, 
 	grabCursor: true,     
 	effect: 'slide',       
 	speed: 600,             
-	
-	
-	// watchSlidesProgress: true,
-	// watchSlidesVisibility: true,
-	// slideToClickedSlide: false,
-	// freeMode: false,       
-	// resistance: false,   
 	navigation: {
 		enabled: true,
 		nextEl: '.hero_button-next',
@@ -141,26 +138,23 @@ const heroSlider = new Swiper('.hero_swiper', {
 		el: '.hero_pagination',
 		clickable: true,
 	},
-	// scrollbar: {
-	// 	// enabled: true,
-	// 	el: '.hero_main_swiper_swiper_scrollbar',
-	// },
 });
 
 const brandsSlider = new Swiper('.brands_swiper', { 
-	slidesPerView: 6,
-	 // Показывать только 1 слайд
-	spaceBetween: 44,
-	// watchSlidesProgress: true, // Следить за прогрессом слайдов
+	breakpoints: {
+		320: {
+			slidesPerView: 2,
+			spaceBetween: 32,
+		},
+		768: {
+			slidesPerView: 6,
+			spaceBetween: 44,
+		}
+	},
 	allowTouchMove: true,
 	grabCursor: true,
 	effect: 'slide',
 	speed: 600,
-	
-	
-	// watchSlidesProgress: true,
-	// watchSlidesVisibility: true,
-	// slideToClickedSlide: false,
 	freeMode: false,
 	resistance: false,   
 	navigation: {
@@ -168,7 +162,39 @@ const brandsSlider = new Swiper('.brands_swiper', {
 		nextEl: '.brands_button-next',
 		prevEl: '.brands_button-prev',
 	},
+	pagination: {
+		el: '.hero_pagination',
+		clickable: true,
+	},
 });
+
+let cardsSwiper;
+    
+function initSwiper() {
+	if (window.innerWidth <= 768 && !cardsSwiper) {
+		cardsSwiper = new Swiper('.cards_content', {
+			slidesPerView: 1,
+			spaceBetween: 40,
+			pagination: {
+				el: '.hero_pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.hero_button-next',
+				prevEl: '.hero_button-prev',
+			},
+		});
+	} else if (window.innerWidth > 768 && cardsSwiper) {
+		cardsSwiper.destroy();
+		cardsSwiper = null;
+	}
+}
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', initSwiper);
+
+// Реинициализация при изменении размера окна
+window.addEventListener('resize', initSwiper);
 
 $(document).ready(function() {
 	const btns = document.querySelectorAll('.btn')

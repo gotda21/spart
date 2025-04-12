@@ -1,3 +1,27 @@
+// HERO MOBILE
+
+.hero_circle__mobile {
+    @include bp($point_2, $direction: min) {
+		display: none;
+	}
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+
+.hero_swiper {
+    @include bp($point_2) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 0rem 6rem 0rem;
+    }
+}
+
+// HERO MOBILE
+
+
 .hero {
     position: relative;
     background-image: url(/i/hero/hero_bg.jpg);
@@ -7,6 +31,9 @@
 }
 
 .hero_circle {
+    @include bp($point_2, $direction: max) {
+		display: none;
+	}
     position: absolute;
     top: 0;
     right: 0;
@@ -27,11 +54,20 @@
 
 .hero_main_slide_general {
     padding: 22.6rem 0;
+
+    @include bp($point_2) {
+        padding: 0;
+    }
 }
 
 .hero_main_content__list {
     display: flex;
     gap: 5rem;
+
+    @include bp($point_2) {
+        flex-direction: column;
+        gap: 1.6rem;
+    }
 }
 
 .hero_main_content_title h2 {
@@ -40,6 +76,11 @@
     line-height: 113%;
     letter-spacing: 0.01em;
     color: $darkergrey;
+
+    @include bp($point_2) {
+        text-align: center;
+        font-size: 4rem;
+    }
 }
 
 .hero_main_slide {
@@ -51,6 +92,11 @@
     width: 90rem;
     right: 0;
     top: -15%;
+
+    @include bp($point_2) {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .hero_button-prev, .hero_button-next {
@@ -94,4 +140,10 @@
     position: absolute;
     bottom: 8rem;
     right: 36rem;
+
+    @include bp($point_2) {
+        position: relative;
+        right: auto;
+        bottom: auto;
+    }
 }

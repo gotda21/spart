@@ -46,10 +46,10 @@ mixin cards(data)
 						.cards_top_title
 							h2=data.title
 						+button({name:"Смотреть все", theme: "top"})
-					.cards_content
-						ul.cards_content__list
+					.cards_content.swiper
+						ul.cards_content__list.swiper-wrapper
 							-for(i = 0; i < 6; i++)
-								li.cards_content__item
+								li.cards_content__item.swiper-slide
 									.cards_content__item_inner
 										.cards_content__item_image
 											img(src=`i/cards/${data.image}.png`, alt="")
@@ -70,16 +70,24 @@ mixin cards(data)
 												span ₽
 										.cards_content__item_button
 											+button({name:"Заказать", theme: "secondary"})
+						.cards_navigation 
+							.hero_button-prev.button-next
+								img(src="i/icons/arrow_prev.svg", alt="")
+							.hero_pagination
+							.hero_button-next.button-next
+								img(src="i/icons/arrow_next.svg", alt="")
+						.cards_content_button__mobile
+							+button({name:"Смотреть все", theme: "top"})
 			else
 				.cards_main
 					.cards_top
 						.cards_top_title
 							h2=data.title
 						+button({name:"Смотреть все", theme: "top"})
-					.cards_content
-						ul.cards_content__list
+					.cards_content.swiper
+						ul.cards_content__list.swiper-wrapper
 							-for(i = 0; i < 6; i++)
-								li.cards_content__item
+								li.cards_content__item.swiper-slide
 									.cards_content__item_inner_other
 										.cards_content__item_image_other
 											img(src=`i/cards/${data.image}.png`, alt="")
@@ -87,3 +95,9 @@ mixin cards(data)
 											h3=data.cardtitle
 										.cards_content__item_button_other
 											+button({name:"Заказать", theme: "secondary"})
+						.cards_navigation
+							.hero_button-prev.button-next
+								img(src="i/icons/arrow_prev.svg", alt="")
+							.hero_pagination
+							.hero_button-next.button-next
+								img(src="i/icons/arrow_next.svg", alt="")
