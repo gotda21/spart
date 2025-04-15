@@ -28,6 +28,10 @@
 .swiper-pagination-bullets {
     display: flex;
     gap: 2.5rem;
+
+    @include bp($point_2) {
+        gap: 1.5rem !important;
+    }
 }
 
 .swiper-pagination-bullet {

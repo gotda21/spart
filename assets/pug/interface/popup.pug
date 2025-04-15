@@ -1,0 +1,10 @@
+.popup.popup_burger
+    .popup_bg.remove
+    .popup_burger
+        .burger_nav__title
+            h2 КАТАЛОГИ
+        .burger_nav__catalog
+            ul.burger_nav__catalog__list
+                each key in [{name:'Запчасти', link:'#'}, {name:'Агрегаты', link:'#'}, {name:'Ремонт', link:'#'}, {name:'Спецтехника', link:'#'}, {name:'Экспресс-доставка', link:'#'}, {name:'О компании', link:'#'}, {name:'Контакты', link:'#'}]
+                    li.burger_nav__catalog__item
+                        a(href=key.link)=key.name

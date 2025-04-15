@@ -1,3 +1,18 @@
+// QUESTION MOBLIE
+
+.question_image__mobile {
+    @include bp($point_2, $direction: min) {
+        display: none;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45rem;
+    z-index: 1;
+}
+
+// QUESTION MOBLIE
+
 .question {
     background-image: url(/i/question/question_bg.png);
     background-repeat: no-repeat;
@@ -5,11 +20,19 @@
     background-size: cover;
     position: relative;
     border-radius: 0rem 0 0 30rem;
+
+    @include bp($point_2) {
+        border-radius: 0rem 0 0 20rem;
+    }
 }
 
 .question_main {
     padding: 11rem 0rem 20rem 0rem;
     display: flex;
+
+    @include bp($point_2) {
+        padding: 45rem 0rem 9rem 0rem;
+    }
 }
 
 .question_content {
@@ -17,18 +40,44 @@
     flex-direction: column;
     gap: 3rem;
     max-width: 75rem;
+    z-index: 5;
+}
+
+.question_content_title h2 {
+    font-size: 5.5rem;
+
+    @include bp($point_2) {
+        font-size: 3.5rem;
+    }
 }
 
 .question_content_descr p{
     font-size: 2rem;
     line-height: 175%;
     font-family: $font_rr;
+
+    @include bp($point_2) {
+        font-size: 1.8rem;
+        line-height: 194%;
+    }
 }
 
 .question_content__list form {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(38%, 1fr));
     gap: 3.4rem;
+
+    @include bp($point_2) {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.question_content__item:nth-child(3) {
+    @include bp($point_2) {
+        order: 3;
+    }
 }
 
 .question_content__item:last-child {
@@ -41,6 +90,10 @@
     padding: 3.3rem 4rem;
     border: none;
     width: 100%;
+
+    @include bp($point_2) {
+        padding: 2rem 3.6rem;
+    }
 }
 
 .question_content__name input[type=text]::placeholder, .question_content__phone input[type=tel]::placeholder {
@@ -48,11 +101,19 @@
     color: $darkergrey;
     line-height: 194%;
     font-size: 1.8rem;
+
+    @include bp($point_2) {
+        font-size: 1.6rem;
+    }
 }
 
 .question_content__button button {
     width: 100%;
     padding: 3.3rem 3rem;
+
+    @include bp($point_2) {
+        padding: 2rem 3.6rem;
+    }
 }
 
 .question_content__agreement {
@@ -86,8 +147,9 @@
         }
 		cursor: pointer;
 		@include bp($point_2) {
-			font-size: 1.2rem;
-			padding-left: 2rem;
+			font-size: 1.4rem;
+			padding-left: 5rem;
+            line-height: 179%;
 		}
 		&:before {
 			position: absolute;
@@ -101,8 +163,8 @@
 			content: "";
 
 			@include bp($point_2) {
-				width: 1.4rem;
-				height: 1.4rem;
+				width: 2.4rem;
+				height: 2.4rem;
 			}
 		}
 
@@ -121,9 +183,9 @@
 			visibility: hidden;
 
 			@include bp($point_2) {
-				width: 0.8rem;
-				height: 0.8rem;
-				left: 0.3rem;
+                width: 1.8rem;
+                height: 1.8rem;
+                left: 0.3rem;
 			}
 		}
 	}
@@ -133,4 +195,10 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
+    width: 80rem;
+
+    @include bp($point_2) {
+        display: none;
+    }
 }

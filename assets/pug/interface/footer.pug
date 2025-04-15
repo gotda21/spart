@@ -18,15 +18,15 @@ footer.footer
                                 .footer_top_kpp
                                     p КПП:  779101001
                     li.footer_top__item
-                        ul.footer_top_navigation__list
-                            each nav in [{name:'Каталоги', link:'#'}, {name:'Запчасти', link:'#'}, {name:'Агрегаты', link:'#'}, {name:'Ремонт', link:'#'}, {name:'Спецтехника', link:'#'}]
-                                li.footer_top_navigation__item
-                                    a(href=nav.link)=nav.name
-                    li.footer_top__item
-                        ul.footer_top_navigation__list
-                            each nav1 in [{name:'Марки машин', link:'#'}, {name:'Экспресс-доставка', link:'#'}, {name:'О компании', link:'#'}, {name:'Контакты', link:'#'}]
-                                li.footer_top_navigation__item
-                                    a(href=nav1.link)=nav1.name
+                        .footer_top__item_navigation
+                            ul.footer_top_navigation__first__list.footer_top_navigation__list
+                                each nav in [{name:'Каталоги', link:'#'}, {name:'Запчасти', link:'#'}, {name:'Агрегаты', link:'#'}, {name:'Ремонт', link:'#'}, {name:'Спецтехника', link:'#'}]
+                                    li.footer_top_navigation__item
+                                        a(href=nav.link)=nav.name
+                            ul.footer_top_navigation__sec__list.footer_top_navigation__list
+                                each nav1 in [{name:'Марки машин', link:'#'}, {name:'Экспресс-доставка', link:'#'}, {name:'О компании', link:'#'}, {name:'Контакты', link:'#'}]
+                                    li.footer_top_navigation__item
+                                        a(href=nav1.link)=nav1.name
                     li.footer_top__item
                         ul.footer_contacts__list
                             li.footer_contacts__item

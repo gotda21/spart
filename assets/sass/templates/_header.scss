@@ -1,5 +1,5 @@
 .header {
-	// position: fixed;
+	position: fixed;
 	top: 0;
 	left: 0;
 	// height: $header;
@@ -151,14 +151,14 @@
 		span {
 			&:nth-child(1) {
 				transform: rotate(45deg);
-				top: 51%;
+				top: 49%;
 			}
 			&:nth-child(2) {
 				opacity: 0;
 			}
 			&:nth-child(3) {
 				transform: rotate(-45deg);
-				bottom: 42%;
+				bottom: 36%;
 			}
 		}
 	}
@@ -294,4 +294,22 @@
 .header_nav__search img {
 	width: 3rem;
 	height: 3rem;
+}
+
+.header.fixed .header_top, .header.fixed .header_nav {
+	background-color: rgb(85 85 85 / 33%);
+    backdrop-filter: blur(1rem);
+    transition: all 0.3s ease-in-out;
+}
+
+.header.fixed .header_nav__mobile p {
+	color: $white;
+}
+
+.header.fixed .header_nav__catalog__item a {
+	color: $white;
+}
+
+.header.fixed .header_nav__catalog__item a:hover {
+	color: $darkyellow;
 }

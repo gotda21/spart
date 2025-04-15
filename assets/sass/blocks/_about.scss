@@ -7,8 +7,8 @@
     border-radius: 0 0 30rem 0;
 
     @include bp($point_2) {
+        background-image: url(/i/about/about_background_mobile.jpg);
         border-radius: 0 0 20rem 0;
-        transform: background-image rotate(90deg);
     }
 }
 
@@ -20,6 +20,7 @@
 
     @include bp($point_2) {
         padding: 41rem 0 7rem 0;
+        gap: 4rem;
     }
 }
 

@@ -28,6 +28,11 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 14.6rem;
+
+    @include bp($point_2) {
+        margin-top: 10rem;
+    }
 }
 
 .hero_circle {

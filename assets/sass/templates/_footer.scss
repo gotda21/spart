@@ -1,3 +1,13 @@
+// FOOTER MOBILE
+
+.footer_top__item:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+}
+
+// FOOTER MOBILE
+
+
 .footer {
 	width: 100%;
 	min-height: $footer;
@@ -19,12 +29,30 @@
 	gap: 4rem;
 	padding: 11rem 0;
 	font-family: $font_rl;
+
+	@include bp($point_2) {
+		padding: 8.2rem 0;
+		gap: 5rem;
+	}
 }
 
 .footer_top__list {
 	display: flex;
 	justify-content: space-between;
 	gap: 18rem;
+
+	@include bp($point_2) {
+		flex-direction: column;
+		gap: 4rem;
+	}
+}
+
+.footer_top_logo {
+	width: 14rem;
+
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
 }
 
 .footer_top_company__list, .footer_top_navigation__list, .footer_contacts__list {
@@ -33,20 +61,61 @@
 	gap: 1.5rem;
 }
 
+.footer_top_company__item, .footer_top__item_navigation {
+	@include bp($point_2) {
+		font-size: 1.6rem;
+		justify-content: space-between;
+		gap: 0;
+	}
+}
+
+.footer_contacts__list {
+	@include bp($point_2) {
+		align-items: start;
+	}
+}
+
+.footer_top__item_navigation {
+	display: flex;
+	gap: 18rem;
+
+	@include bp($point_2) {
+		gap: 6rem;
+	}
+}
+
 .footer_top_navigation__item a:hover, .footer_top_navigation__item a:hover {
 	color: $lighteryellow;
+}
+
+.footer_contacts__item {
+	@include bp($point_2) {
+		font-family: $font_rr;
+		font-size: 1.6rem;
+	}
 }
 
 .footer_contacts_phone {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
+
+	@include bp($point_2) {
+		align-items: start;
+	}
 }
 
 .footer_contacts_phone_connect, .footer_contacts_phone_connect a {
 	display: flex;
 	gap: 1rem;
 	align-items: center;
+}
+
+.footer_contacts_phone_connect a {
+	@include bp($point_2) {
+
+		margin-right: 3rem;
+	}
 }
 
 .footer_contacts_phone_connect span {
@@ -57,6 +126,11 @@
 .footer_contacts_phone_connect img {
 	width: 2rem;
 	height: 2rem;
+
+	@include bp($point_2) {
+		width: 1.7rem;
+		height: 1.7rem;
+	}
 }
 
 .footer_contacts_phone_icon img {
@@ -68,6 +142,10 @@
 	color: $darkyellow;
 	font-family: $font_rb;
 	text-decoration: underline;
+
+	@include bp($point_2) {
+		font-size: 1.4rem;
+	}
 }
 
 .footer_contacts_address a {
@@ -78,6 +156,11 @@
 .footer_contacts_address img {
 	width: 1.5rem;
     height: 2rem;
+
+	@include bp($point_2) {
+		width: 1.2rem;
+		height: 1.7rem;
+	}
 }
 
 .footer_contacts_mail a {
@@ -94,4 +177,9 @@
 
 .footer_copyright {
 	text-align: center;
+
+	@include bp($point_2) {
+		font-family: $font_rl;
+		font-size: 1.6rem;
+	}
 }
